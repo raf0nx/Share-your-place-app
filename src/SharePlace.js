@@ -60,10 +60,10 @@ class PlaceFinder {
     );
     modal.show();
     navigator.geolocation.getCurrentPosition(
-      async (successResutl) => {
+      async (successResult) => {
         const coordinates = {
-          lat: successResutl.coords.latitude,
-          lng: successResutl.coords.longitude,
+          lat: successResult.coords.latitude,
+          lng: successResult.coords.longitude,
         };
         const address = await getAddressFromCoords(coordinates);
         modal.hide();
